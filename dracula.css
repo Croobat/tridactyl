@@ -34,130 +34,33 @@
 	--tridactyl-hint-outline: none;
 }
 
-#command-line-holder {
+/* completions */
+#completions {
+	color: var(--tridactyl-fg);
+	background: var(--tridactyl-bg) !important;
+	border-top: unset;
 	order: 1;
+}
+
+#completions .sectionHeader {
+	background: unset !important;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: 500;
+}
+
+.TridactylStatusIndicator {
+	display: none !important;
+}
+
+#command-line-holder {
+	order: 2;
 	color: var(--tridactyl-fg);
 	background-color: var(--tridactyl-bg);
 }
 
 #tridactyl-input {
 	color: var(--tridactyl-fg);
-	background-color: var(--tridactyl-bg);
-}
-
-#completions table {
-	font-size: 1rem;
-	font-weight: 200;
-	border-spacing: 0;
-	table-layout: fixed;
-	padding: 1rem;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-}
-
-#completions>div {
-	max-height: calc(20 * var(--option-height));
-	min-height: calc(10 * var(--option-height));
-}
-
-/* COMPLETIONS */
-
-#completions {
-	--option-height: 1.4em;
-	color: var(--tridactyl-fg);
 	background: var(--tridactyl-bg);
-	display: inline-block;
-	font-size: unset;
-	font-weight: 200;
-	overflow: hidden;
-	width: 100%;
-	border-top: unset;
-	order: 2;
-}
-
-/* Olie doesn't know how CSS inheritance works */
-#completions .HistoryCompletionSource {
-	max-height: unset;
-	min-height: unset;
-}
-
-#completions .HistoryCompletionSource table {
-	width: 100%;
-	font-size: 9pt;
-	border-spacing: 0;
-	table-layout: fixed;
-}
-
-/* redundancy 2: redundancy 2: more redundancy */
-#completions .BmarkCompletionSource {
-	max-height: unset;
-	min-height: unset;
-}
-
-#completions table tr td.prefix,
-#completions table tr td.privatewindow,
-#completions table tr td.container,
-#completions table tr td.icon {
-	display: none;
-}
-
-#completions .BufferCompletionSource table {
-	width: unset;
-	font-size: unset;
-	border-spacing: unset;
-	table-layout: unset;
-}
-
-#completions table tr .title {
-	width: 50%;
-}
-
-#completions table tr {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-#completions .sectionHeader {
-	color: var(--tridactyl-fg);
-	background: unset;
-	font-weight: 200;
-	border-bottom: unset;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-}
-
-.TridactylStatusIndicator {
-	display: none !important;
-	position: fixed !important;
-	bottom: 0 !important;
-	background: var(--tridactyl-bg) !important;
-	border: unset !important;
-	border: 1px var(--base08) solid !important;
-	font-size: 12pt !important;
-	font-weight: 200 !important;
-	padding: 0.8ex !important;
-}
-
-#completions .focused {
-	background: var(--base02);
-	color: var(--base00);
-}
-
-#completions .focused .url {
-	background: var(--base02);
-	color: var(--base00);
-}
-
-#Ocean-normal {
-	border-color: green !important;
-}
-
-#Ocean-insert {
-	border-color: yellow !important;
-}
-
-.optionContainer {
-	padding: 0 !important;
-	color: var(--tridactyl-fg);
+	padding-bottom: 25px;
 }
