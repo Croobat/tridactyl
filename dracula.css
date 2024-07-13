@@ -46,7 +46,35 @@
 	background: unset !important;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	margin-bottom: 0px;
 	font-weight: 500;
+}
+
+#completions .sectionHeader, #completions .option {
+	height: var(--option-height);
+	line-height: var(-option-height);
+	text-wrap: auto;
+	border-bottom: 1px dashed var(--base01);
+}
+
+#completions > div > table {
+	border-collapse: collapse;
+}
+
+#completions table tr td.content {
+	width: 40%;
+}
+
+.ExcmdCompletionOption td.excmd {
+	padding-left: 0.5rem;
+	width: 15%;
+	color: var(--base0F);
+	padding: 0.25rem;
+	border-right: 1px dashed var(--base0A);
+}
+
+.ExcmdCompletionOption td.documentation {
+	padding: 0.25rem;
 }
 
 .TridactylStatusIndicator {
